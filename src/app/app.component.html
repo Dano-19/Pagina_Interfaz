@@ -66,6 +66,7 @@
         <ng-template pTemplate="footer">
             <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
                 <p-button label="Ver mas" severity="info" />
+                <p-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
             </div>
         </ng-template>
     </p-card>
@@ -79,7 +80,7 @@
         </p>
         <ng-template pTemplate="footer">
             <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
-                <p-button label="Ver mas" severity="info" />
+                <p-button label="Ver mas" severity="info" /><p-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
             </div>
         </ng-template>
     </p-card>
@@ -94,6 +95,7 @@
         <ng-template pTemplate="footer">
             <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
                 <p-button label="Ver mas" severity="info" />
+                <p-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
             </div>
         </ng-template>
     </p-card>
@@ -109,6 +111,7 @@
         <ng-template pTemplate="footer">
             <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
                 <p-button label="Ver mas" severity="info" />
+                <p-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
             </div>
         </ng-template>
     </p-card>
@@ -126,7 +129,7 @@
     </div>
 
       <div class="container">
-        <h2>Formulario</h2>
+        <h2>Hazte Voluntario</h2>
         <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="firstName">Nombre:</label>
