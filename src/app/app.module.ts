@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { GalleriaModule } from 'primeng/galleria';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     CardModule,
     ButtonModule,
-    
+    GalleriaModule,
+    RouterModule.forChild([
+      { path: '', component: AppComponent }  
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent],

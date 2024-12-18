@@ -21,6 +21,39 @@
         </div>
     </div>
 
+    <p-carousel
+  [value]="products"
+  [numVisible]="3"
+  [numScroll]="1"
+  [responsiveOptions]="responsiveOptions"
+  [circular]="true">
+  <ng-template let-product pTemplate="item">
+    <div class="product-item p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <div class="mb-4 overflow-hidden rounded-lg">
+        <img 
+        [src]="product.image" 
+        [alt]="product.name" 
+        class="w-full h-auto object-cover object-center rounded-lg" />
+      </div>
+
+      <div class="product-detail text-center">
+        <h4 class="text-xl font-semibold text-gray-800 mb-2">{{ product.name }}</h4>
+        <p class="text-lg text-gray-600 mb-3">${{ product.price }}</p>
+
+        <p-tag 
+          [value]="product.inventoryStatus"
+          [severity]="getSeverity(product.inventoryStatus)"
+          class="mb-3"
+        ></p-tag>
+
+        <div class="flex justify-center space-x-4">
+          <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" class="p-button-rounded p-button-outlined" />
+          <p-button icon="pi pi-shopping-cart" styleClass="p-button-rounded p-button-outlined" class="ml-2" />
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
 
     <div class="card-container">
     <p-card header="HÁBITAT NATURAL" subheader="EL ÁRTICO" [style]="{ width: '300px' }">
